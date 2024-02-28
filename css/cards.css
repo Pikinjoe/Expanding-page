@@ -1,0 +1,73 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.one {
+    background-image:url(/images/beautiful-view-greenery-bridge-forest-perfect-background.jpg);
+}
+.two {
+    background-image: url(/images/natures-beauty-reflected-tranquil-mountain-waters-generative-ai.jpg);
+}
+.three {
+    background-image: url(/images/painting-mountain-lake-with-mountain-background\ \(1\).jpg);
+}
+.four {
+    background-image: url(/images/pexels-helena-lopes-1388069.jpg);
+}
+.five {
+    background-image: url(/images/pexels-james-wheeler-1519088.jpg);
+}
+.container {
+    display: flex;
+    gap: 10px;
+    width: 90vw;
+}
+.panel {
+    width: 50px;
+    height: 90vh;
+    border-radius: 50px;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    flex: 0.5;
+    position: relative;
+    transition-property: flex;
+    transition-duration: 0.7s;
+    transition-timing-function: ease-in;
+}
+.active {
+    flex: 5;
+}
+
+h2 {
+    text-transform: capitalize;
+    color: aliceblue;
+    font-size: 15px;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    opacity: 0;
+}
+.active h2 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+@media (max-width: 500px){
+    .container {
+        width: 100vw;
+    }
+    .panel:nth-child(4),.panel:nth-child(5){
+        display: none;
+    }
+}
+
+
